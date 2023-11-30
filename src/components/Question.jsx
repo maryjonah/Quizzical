@@ -9,10 +9,10 @@ export default function Question(props) {
     ))
 
     return (
-        <div>
+        <main>
             <h3>{props.question.question}</h3>
             <div className="answers">{answerOptions}</div>
             <hr />
-        </div>
+        </main>
     )
 }

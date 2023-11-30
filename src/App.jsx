@@ -2,6 +2,7 @@ import React from "react";
 import LandingPage from "./components/LandingPage";
 import "./App.css";
 import Question from "./components/Question";
+import { decode }  from "html-entities";
 
 export default function App() {
     const [firstLoad, setFirstLoad] = React.useState(true);
@@ -19,7 +20,7 @@ export default function App() {
             {
                 id: idx, 
                 question: obj.question, 
-                answers: [obj.correct_answer, ...obj.incorrect_answers],
+                answers: [decode(obj.correct_answer), ...obj.incorrect_answers],
                 correct_answer: obj.correct_answer
             })
         )
