@@ -3,6 +3,7 @@ import LandingPage from "./components/LandingPage";
 import "./App.css";
 import Question from "./components/Question";
 import { decode }  from "html-entities";
+import { nanoid } from "nanoid";
 
 export default function App() {
     const [firstLoad, setFirstLoad] = React.useState(true);
@@ -18,13 +19,21 @@ export default function App() {
     function getQuestions(lstQuestions) {
         const cleanedQuestions = lstQuestions.map((obj, idx) => (
             {
-                id: idx, 
-                question: obj.question, 
-                answers: [decode(obj.correct_answer), ...obj.incorrect_answers],
+                id: nanoid(), 
+                question: decode(obj.question),
+                answers: shuffleAnswers([obj.correct_answer, ...obj.incorrect_answers]),
                 correct_answer: obj.correct_answer
             })
         )
         return cleanedQuestions;
+    }
+
+    function shuffleAnswers(arrAnswers) {
+        for (let i=arrAnswers.length - 1; i>0; i--) {
+            const index = Math.floor(Math.random() * (i+1));
+            [arrAnswers[i], arrAnswers[index]] = [decode([arrAnswers[index]]), decode([arrAnswers[i]])];
+        }
+        return arrAnswers;
     }
 
     const questionElements = allQuestions.map(question => {

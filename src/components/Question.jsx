@@ -12,7 +12,7 @@ export default function Question(props) {
         <main>
             <h3>{props.question.question}</h3>
             <div className="answers">{answerOptions}</div>
-            <hr />
+            {/* <hr /> */}
         </main>
     )
 }
