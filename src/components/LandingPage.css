@@ -11,7 +11,7 @@ header {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url("./blob_5.png"), url("../blobs.png");
+    background-image: url("./blob_5.png"), url("./blobs.png");
     background-repeat: no-repeat, no-repeat;
     background-position: bottom left, top right;
 }
