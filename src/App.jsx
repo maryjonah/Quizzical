@@ -17,7 +17,7 @@ export default function App() {
         <main>
             {
                 firstLoad ? 
-                <LandingPage /> : 
+                <LandingPage setFirstLoad={ setFirstLoad }/> : 
                 <h4>First Page</h4>
             }
         </main>
