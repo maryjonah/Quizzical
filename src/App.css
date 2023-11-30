@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh; /* Set the height of the body to 100% of the viewport height */
-  background-image: url('/blobs.png'), url('/blob_5.png');
+  background-image: url(/blobs.png), url(/blob_5.png);
   background-position: right top, left bottom;
   background-repeat: no-repeat, no-repeat;
   background-size: auto, auto; /* You can adjust the size as needed */
