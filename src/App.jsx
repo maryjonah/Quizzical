@@ -47,6 +47,7 @@ export default function App() {
                 <LandingPage setFirstLoad={ setFirstLoad }/> : 
                 <div className="container">
                     {allQuestions.length > 0 ? questionElements : <h3>Loading Questions...</h3>}
+                    <button className="btn-answers">Check Answers</button>
                 </div>                
             }
         </main>

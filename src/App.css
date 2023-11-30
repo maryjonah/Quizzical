@@ -11,7 +11,20 @@ body {
   background-attachment: fixed, fixed; /* Fix the background images */
 }
 
+/* main {
+  display: flex;
+  flex-direction: column;
+} */
+
 .container {
+  display: flex;
+  flex-direction: column;
   max-width: 80%;
   margin: 0 auto;
+}
+
+.btn-answers {
+  font-size: 0.75rem;
+  width: 150px;
+  margin: 30px auto;
 }
